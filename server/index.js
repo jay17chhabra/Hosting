@@ -16,13 +16,7 @@ import { fileURLToPath } from 'url';
 const app = express();
 app.use(bodyParser.json());
 
-const corsOptions = {
-  origin: ['https://hosting-86jb-p5pumppek-jay-chhabras-projects.vercel.app', 'https://hosting-umber.vercel.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // Uncomment these lines if you want to serve static files from the client/build directory
