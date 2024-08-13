@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ['https://hosting-client.vercel.app', 'https://hosting-client-git-main-jay-chhabras-projects.vercel.app', 'https://hosting-client-7hq8dztrv-jay-chhabras-projects.vercel.app'],
+  origin: '*', // Allow all origins temporarily for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
