@@ -64,7 +64,7 @@ const CheckoutForm = () => { // Remove createOrder from here
     const { id } = paymentMethod;
     try {
       console.log('Calling payment API with paymentMethodId:', id); // Debug statement
-      const response = await axios.post('http://localhost:3000/api/payment', {
+      const response = await axios.post('https://hosting-umber.vercel.app/api/payment', {
         id,
         amount, // Change the amount as per your requirement
         userId: userInfo.id,
