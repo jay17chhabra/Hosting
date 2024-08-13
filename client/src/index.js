@@ -24,7 +24,7 @@ const theme = createTheme({
 });
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3000/graphql",
+  uri:  "https://hosting-umber.vercel.app/graphql",
 });
 
 const authLink = setContext(() => {
