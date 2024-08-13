@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'https://hosting-umber.vercel.app', // Update with your frontend URL
+  origin: ['https://hosting-umber.vercel.app'], // Update with your frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Allow cookies
 };
