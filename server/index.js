@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ['https://hosting-umber.vercel.app'], // Add other origins if needed
+  origin: ['https://hosting-86jb.vercel.app', 'https://hosting-umber.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
