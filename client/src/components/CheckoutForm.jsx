@@ -95,6 +95,7 @@ const CheckoutForm = () => { // Remove createOrder from here
 
   return (
     <>
+    
       <Wrapper>
         <TitleContainer>
           <Title>Checkout</Title>
@@ -123,7 +124,7 @@ const CheckoutForm = () => { // Remove createOrder from here
 export default CheckoutForm;
 
 const Wrapper = styled.div`
-  display: flex;
+  display: contents;
   flex-direction: column;
   align-items: center;
   padding: 4rem; /* Increased padding */
@@ -150,7 +151,8 @@ const Title = styled.h2`
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
 `;
 
 const Info = styled.div`

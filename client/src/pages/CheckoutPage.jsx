@@ -37,11 +37,11 @@ const CheckoutPage = () => {
     return (
       <div className='section-center'>
         <Navbar />  
-        <Wrapper>
+        {/* <Wrapper> */}
           <Elements stripe={stripePromise}>
             <CheckoutForm />
           </Elements>
-        </Wrapper>
+        {/* </Wrapper> */}
       </div>
     );
   };

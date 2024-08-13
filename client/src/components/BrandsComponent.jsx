@@ -13,16 +13,16 @@ const BrandsComponent = () => {
     <Title>Our Featured Brands</Title>
     <BrandsContainer>
       <BrandLogo>
-        <img src={nikeimage} />
+        <img src={nikeimage} alt="Nike Logo"/>
       </BrandLogo>
       <BrandLogo>
-        <img src={adidasimage} />
+        <img src={adidasimage} alt="Adidas logo"/>
       </BrandLogo>
       <BrandLogo>
-        <img src={underarmour} alt="Under Armour" />
+        <img src={underarmour} alt="Under Armour Logo" />
       </BrandLogo>
       <BrandLogo>
-        <img src={newbalance} alt="New Balance" />
+        <img src={newbalance} alt="New Balance Logo" />
       </BrandLogo>
     </BrandsContainer>
   </div>

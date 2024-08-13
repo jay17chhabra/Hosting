@@ -12,7 +12,7 @@ const ProductsContainer = ({ title, image, price, rates, id }) => {
       <Wrapper>
         <Link to={`/shop/${id}`}>
           <ImageContainer>
-            <Image src={image} />
+            <Image src={image} alt={title}/>
           </ImageContainer>
 
           <Title>{title}</Title>
