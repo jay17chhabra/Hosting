@@ -16,7 +16,13 @@ import { fileURLToPath } from 'url';
 const app = express();
 app.use(bodyParser.json());
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://hosting-umber.vercel.app', // Update with your frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow cookies
+};
+
+app.use(cors(corsOptions)); // Apply CORS settings
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // Uncomment these lines if you want to serve static files from the client/build directory
