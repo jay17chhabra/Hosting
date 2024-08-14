@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const createOrder = async (userId, cartProducts, paymentId) => {
   try {
-    const response = await axios.post('https://hosting-lime-omega.vercel.app/api/orders', {
+    const response = await axios.post('api/orders', {
       userId,
       cartProducts,
       paymentId,
