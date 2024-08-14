@@ -2,7 +2,7 @@
   "name": "funky-feet",
   "type": "module",
   "version": "1.0.0",
-  "proxy": "https://hosting-lime-omega.vercel.app/"
+  "proxy": "https://hosting-lime-omega.vercel.app/",
   "description": "",
   "main": "index.js",
   "scripts": {
