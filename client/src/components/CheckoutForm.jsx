@@ -64,7 +64,7 @@ const CheckoutForm = () => { // Remove createOrder from here
     const { id } = paymentMethod;
     try {
       console.log('Calling payment API with paymentMethodId:', id); // Debug statement
-      const response = await axios.post('https://hosting-lime-omega.vercel.app/api/payment', {
+      const response = await axios.post('api/payment', {
         id,
         amount, // Change the amount as per your requirement
         userId: userInfo.id,
