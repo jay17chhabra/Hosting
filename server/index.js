@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: '*', // Allow all origins temporarily for debugging
+  origin: ['https://hosting-lime-omega.vercel.app/'], // Allow all origins temporarily for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
