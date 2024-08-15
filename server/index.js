@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ['https://hosting-lime-omega.vercel.app/'], // Allow all origins temporarily for debugging
+  origin: ['http://localhost:3000','https://hosting-lime-omega.vercel.app/'], // Allow all origins temporarily for debugging
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -55,15 +55,18 @@ const startServer = async () => {
   apolloServer.applyMiddleware({ app: app });
   try {
     await connectDB(process.env.MONGO_URI);
+
+  app.use('/graphql', (req, res, next) => {
+      if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        return res.status(200).json({});
+      }
+      next();
+    });
+    
     app.use('/api', paymentRoutes);
     app.use('/api', orderRoutes);
-    app.use('/graphql', express.json(), (req, res, next) => {
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return res.status(200).json({});
-  }
-  next();
-});
+    
     app.listen(PORT, () => console.log('Server is running'));
   } catch (error) {
     throw new Error(error);
