@@ -24,7 +24,7 @@ const theme = createTheme({
 });
 
 const httpLink = createHttpLink({
-  uri:  "graphql",
+  uri:  "https://hosting-lime-omega.vercel.app/graphql",
 });
 
 const authLink = setContext(() => {
