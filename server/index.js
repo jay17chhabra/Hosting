@@ -63,6 +63,10 @@ const startServer = async () => {
       }
       next();
     });
+
+    app.get('/api/test', (req, res) => {
+    res.send('Test route is working!');
+});
     
     app.use('/api', paymentRoutes);
     app.use('/api', orderRoutes);
